@@ -1,0 +1,36 @@
+#EVENT {SESSION CONNECTED}
+{
+  #VAR {session[name]} {%0};
+};
+
+#session {dbzepic} {dbzepic.org} {6200}
+
+#config {command echo} {off};
+#config {repeat enter} on
+
+#format {session[ScreenRows]} {%R};
+#format {session[ScreenCols]} {%C};
+
+#alias fn {fly 5 north}
+#alias fs {fly 5 south}
+#alias fe {fly 5 east}
+#alias fw {fly 5 west}
+#alias fnw {fly 5 nw}
+#alias fne {fly 5 ne}
+#alias fsw {fly 5 sw}
+#alias fse {fly 5 se}
+#alias pr {punch right}
+#alias pl {punch left}
+#alias o {sweep}
+#alias dr {dodge right}
+#alias dl {dodge left}
+#alias pp {power up}
+#alias ps {power stop}
+#alias f {parry high}
+#alias v {parry low}
+#alias scan {sense}
+
+#NOP #READ ${session[name]}_Variables.tin;
+#NOP #READ General.tin;
+#NOP SPLIT 4 1;
+
