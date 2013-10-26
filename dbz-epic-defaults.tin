@@ -1,0 +1,56 @@
+#NOP == DEFENSE ==
+#alias d {dodge left}
+#alias g {dodge right}
+#alias f {parry high}
+#alias v {parry low}
+#alias j {jump}
+#alias m {duck}
+#alias c {deflect}
+
+#NOP === STANDARD MELEE ===
+#alias pr {punch right}
+#alias pl {punch left}
+#alias o {sweep}
+#alias r {roundhouse}
+
+#NOP === SPECIAL MELEE ==
+#alias upper {uppercut}
+#alias ham {hammer}
+
+#NOP === RANGED MELEE ===
+#alias kn {knee}
+#alias el {elbow}
+
+#NOP === BLASTS ===
+#alias bl {blast}
+#alias ka {kamehameha}
+#alias re {renzoku}
+
+#NOP === STUNNED MELEE ===
+#alias yank {yank}
+#alias throw {throw}
+
+#NOP === MISC ===
+#alias pp {power up}
+#alias ps {power stop}
+#alias scan {sense}
+
+#NOP === MOVEMENT ===
+#alias n {north}
+#alias s {south}
+#alias w {west}
+#alias e {east}
+
+#if {"$move_speed" == 0} {#var move_speed 5}
+
+#alias fn {fly $move_speed north}
+#alias fs {fly $move_speed south}
+#alias fe {fly $move_speed east}
+#alias fw {fly $move_speed west}
+#alias fnw {fly $move_speed nw}
+#alias fne {fly $move_speed ne}
+#alias fsw {fly $move_speed sw}
+#alias fse {fly $move_speed se}
+
+#NOP === TRIGGERS ===
+#action {You're now considered idle %*} {save;quit;}
