@@ -1,0 +1,6 @@
+#EVENT {SESSION CONNECTED}
+{
+  #VAR {session[name]} {%0};
+};
+
+#session {dbzepic} {dbzepic.org} {6200}

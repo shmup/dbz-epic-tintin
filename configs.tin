@@ -1,0 +1,5 @@
+#config {command echo} {off};
+#config {repeat enter} on
+
+#format {session[ScreenRows]} {%R};
+#format {session[ScreenCols]} {%C};

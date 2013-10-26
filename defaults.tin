@@ -1,0 +1,4 @@
+#READ connection.tin
+#READ configs.tin
+#READ triggers.tin
+#READ aliases.tin

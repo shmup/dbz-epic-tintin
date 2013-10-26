@@ -1,20 +1,6 @@
-#EVENT {SESSION CONNECTED}
-{
-  #VAR {session[name]} {%0};
-};
-
-#session {dbzepic} {dbzepic.org} {6200}
-
-#config {command echo} {off};
-#config {repeat enter} on
-
-#format {session[ScreenRows]} {%R};
-#format {session[ScreenCols]} {%C};
+#READ defaults.tin
 
 #var move_speed 5
-
-#NOP === DEFAULTS ===
-#READ dbz-epic-defaults.tin;
 
 #NOP === SPECIAL MELEE ==
 #alias wo {wolf}
