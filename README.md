@@ -1,4 +1,4 @@
-tintin-scripts
-============
+Drag(*)nBall Z: Epic Scripts
+=========
 
-Scripts for the various muds I play.
+A collection of scripts I use to play DBZ:Epic
