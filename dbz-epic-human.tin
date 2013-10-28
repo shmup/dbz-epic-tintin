@@ -14,10 +14,18 @@
 #alias lb {light;kame}
 #alias ldd {light;dd}
 #alias ld {light;do %0}
+#alias lt {light;tri %0}
+#alias sh {spirit;hammer}
+#alias sw {spirit;wolf %0}
+#alias st {spirit;tri %0}
+#alias sb {spirit;kame}
+#alias sdd {spirit;dd}
+#alias sd {spirit;do %0}
 
 #NOP == DEFENSE ==
 #alias so {solar}
 #alias ll {light}
+#alias ss {spirit}
 
 #NOP == MISC ==
 #alias cc {power down;power stop;}
