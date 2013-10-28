@@ -1,4 +1,4 @@
-Drag(*)nBall Z: Epic Scripts
+Drag(*)nBall Z: Epic TinTin Scripts
 =========
 
  * configs.tin: all of your default #config settings
