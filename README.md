@@ -1,12 +1,12 @@
 Drag(*)nBall Z: Epic Scripts
 =========
 
-configs.tin: all of your default #config settings
-aliases.tin: all of your default #alias settings
-triggers.tin: all of your default #trigger settings
-connection.tin: the connection/session for the mud
-defaults.tin: loads all of the default files, and gets linked in a race/character specific file
-dbz-epic-human.tin: this is what you run when you want to play a human
+ * configs.tin: all of your default #config settings
+ * aliases.tin: all of your default #alias settings
+ * triggers.tin: all of your default #trigger settings
+ * connection.tin: the connection/session for the mud
+ * defaults.tin: loads all of the default files, and gets linked in a race/character specific file
+ * dbz-epic-human.tin: this is what you run when you want to play a human
 
 Usage example: tt++ dbz-epic-human.tin
 
