@@ -8,14 +8,14 @@
 #alias c {deflect}
 
 #NOP === STANDARD MELEE ===
-#alias pr {punch right}
-#alias pl {punch left}
+#alias u {punch right}
+#alias i {punch left}
 #alias o {sweep}
 #alias r {roundhouse}
 
 #NOP === SPECIAL MELEE ==
 #alias upper {uppercut}
-#alias ham {hammer}
+#alias h {hammer}
 
 #NOP === RANGED MELEE ===
 #alias kn {knee}
@@ -32,8 +32,13 @@
 
 #NOP === MISC ===
 #alias pp {power up}
+#alias pd {power down}
 #alias ps {power stop}
 #alias scan {sense}
+#alias ff {fly;fly}
+
+#alias {tar} {#var target %0}
+#alias {ms} {#var move_speed %0}
 
 #NOP === MOVEMENT ===
 #alias n {north}

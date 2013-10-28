@@ -1,14 +1,31 @@
 #READ defaults.tin
 
-#var move_speed 5
+#alias reload {#read {dbz-epic-human.tin}}
 
-#NOP === SPECIAL MELEE ==
+#var default_move_speed 5
+#var move_speed $default_move_speed
+
+#NOP === SPECIAL MELEE ===
 #alias wo {wolf}
+
+#NOP === SUPER DUPER ABILITIES ===
+#alias lh {light;hammer}
+#alias lw {light;wolf %0}
+#alias lb {light;kame}
+#alias ldd {light;dd}
+#alias ld {light;do %0}
 
 #NOP == DEFENSE ==
 #alias so {solar}
+#alias ll {light}
+
+#NOP == MISC ==
+#alias cc {power down;power stop;}
 
 #NOP === BLASTS ===
 #alias do {dodonpa}
 #alias tr {tri}
-#alias dd {destructo}
+#alias dd {
+    dest %0
+    #NOP #if {"%0" != ""} {#echo {1}};#elseif {"$target" != 0} {#echo {2}};#else {#echo {3}}
+}

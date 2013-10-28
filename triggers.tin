@@ -1,1 +1,2 @@
 #action {You're now considered idle %*} {save;quit;}
+#action {You can't fly that fast!} {ms $default_move_speed}

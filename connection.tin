@@ -3,4 +3,4 @@
   #VAR {session[name]} {%0};
 };
 
-#session {dbzepic} {dbzepic.org} {6200}
+#session {dbzepic} {moemuds.com} {6200}

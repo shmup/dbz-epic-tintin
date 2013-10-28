@@ -1,5 +1,9 @@
 #config {command echo} {off};
-#config {repeat enter} on
+#config {repeat enter} on;
 
-#format {session[ScreenRows]} {%R};
-#format {session[ScreenCols]} {%C};
+#split 1 1;
+
+#NOC This adds your last received tell to the split up top
+#action {[TELL] <- %1, '%2'} {
+    #format line {<007>%1: %2} {%1} {%2}; #showme {$line} {-1};
+}
