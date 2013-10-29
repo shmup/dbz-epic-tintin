@@ -7,17 +7,17 @@
 
 #NOP === SUPER DUPER ABILITIES ===
 #alias lh {light;h}
-#alias lw {light;wo %0}
-#alias lb {light;ka %0}
-#alias ldd {light;dd %0}
-#alias ld {light;do %0}
-#alias lt {light;tri %0}
+#alias lw {light;wo}
+#alias lb {light;ka}
+#alias ldd {light;dd}
+#alias ld {light;do}
+#alias lt {light;tri}
 #alias sh {spirit;h}
-#alias sw {spirit;wo %0}
-#alias st {spirit;tr %0}
-#alias sb {spirit;k %0}
-#alias sdd {spirit;dd %0}
-#alias sd {spirit;do %0}
+#alias sb {spirit;bl}
+#alias sw {spirit;wo}
+#alias st {spirit;tr}
+#alias sdd {spirit;dd}
+#alias sd {spirit;do}
 
 #NOP == DEFENSE ==
 #alias so {solar @determine_target{%0}}

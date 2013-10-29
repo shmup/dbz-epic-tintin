@@ -30,10 +30,6 @@
 #alias yank {yank}
 #alias throw {throw}
 
-#NOP === FINISHERS ===
-#alias finish {\finish @determine_target{%0}}
-#alias snap {\snap @determine_target{%0}}
-
 #NOP === MISC ===
 #alias pp {power up}
 #alias pd {power down}
