@@ -1,6 +1,6 @@
-#EVENT {SESSION CONNECTED}
+#event {SESSION CONNECTED}
 {
-  #VAR {session[name]} {%0};
+  #var {session[name]} {%0};
 };
 
 #session {dbzepic} {moemuds.com} {6200}

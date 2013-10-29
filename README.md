@@ -2,6 +2,7 @@ Drag(*)nBall Z: Epic TinTin Scripts
 =========
 
  * configs.tin: all of your default #config settings
+ * variables.tin: all of your global #variables
  * aliases.tin: all of your default #alias settings
  * triggers.tin: all of your default #trigger settings
  * functions.tin: all of your default @function settings

@@ -1,0 +1,6 @@
+#NOP === Global Variables ===
+
+#if {&{default_move_speed} == 0} {#var default_move_speed 5}
+#var move_speed $default_move_speed;
+
+#var farming false

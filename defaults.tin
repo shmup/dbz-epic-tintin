@@ -1,4 +1,5 @@
 #READ connection.tin
+#READ variables.tin
 #READ configs.tin
 #READ triggers.tin
 #READ aliases.tin

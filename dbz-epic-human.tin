@@ -1,7 +1,6 @@
 #READ defaults.tin
 
 #var default_move_speed 5
-#var move_speed $default_move_speed
 
 #NOP === SPECIAL MELEE ===
 #alias wo {wolf @determine_target{%0}}

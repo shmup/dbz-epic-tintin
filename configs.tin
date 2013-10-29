@@ -1,4 +1,8 @@
+#NOP Don't show commands once sent
 #config {command echo} {off};
+
+#NOP You can repeat commands by pressing <return>
 #config {repeat enter} on;
 
+#NOP Puts 1 row at the top, and 1 row at the bottom
 #split 1 1;

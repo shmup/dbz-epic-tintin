@@ -18,8 +18,8 @@
 #alias h {hammer}
 
 #NOP === RANGED MELEE ===
-#alias kn {knee}
-#alias el {elbow}
+#alias kn {knee @determine_target{%0}}
+#alias el {elbow @determine_target{%0}}
 
 #NOP === BLASTS ===
 #alias bl {blast @determine_target{%0}}
@@ -31,8 +31,8 @@
 #alias throw {throw}
 
 #NOP === FINISHERS ===
-#alias finish {finish @determine_target{%0}}
-#alias snap {snap @determine_target{%0}}
+#alias finish {\finish @determine_target{%0}}
+#alias snap {\snap @determine_target{%0}}
 
 #NOP === MISC ===
 #alias pp {power up}
@@ -41,6 +41,10 @@
 #alias cc {power down;power stop;}
 #alias scan {sense}
 #alias ff {fly;fly}
+#alias {speed} {#var move_speed %0}
+
+#NOP Determine if target has been set, or if enemy argument
+#NOP has been passed in
 #alias {target} {
     #if {"%0" == ""} {
         #if {&{target}} {#var result $target} {#var result {no one}}
@@ -52,7 +56,9 @@
         #showme {<cfa>Targetting <fff>%0<cfa>.};
     }
 }
-#alias {speed} {#var move_speed %0}
+
+
+#NOP Adjust as necessary. Command to reload all config files.
 #alias reload {
     #read {defaults.tin};
     #read {dbz-epic-human.tin};
@@ -79,6 +85,23 @@
         reset_speed;
         reset_target;
         #showme {<cfa>Resetting <fff>speed<cfa> and <fff>target<cfa>.};
+    }
+}
+
+#alias toggle {
+    #if {"%0" == "farming"} {
+        #if {$farming == true} {
+            #var farming false;
+            #showme {<fff>Farming <cfa>is now<fff> disabled<cfa>.};
+        };
+        #else {
+            #var farming true;
+            #showme {<fff>Farming <cfa>is now<fff> enabled<cfa>.};
+        }
+    };
+    #else {
+        #if {"%0" == ""} {\toggle};
+        #else {\toggle %0};
     }
 }
 
