@@ -2,8 +2,3 @@
 #config {repeat enter} on;
 
 #split 1 1;
-
-#NOC This adds your last received tell to the split up top
-#action {[TELL] <- %1, '%2'} {
-    #format line {<007>%1: %2} {%1} {%2}; #showme {$line} {-1};
-}

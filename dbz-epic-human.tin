@@ -1,39 +1,37 @@
 #READ defaults.tin
 
-#alias reload {#read {dbz-epic-human.tin}}
-
 #var default_move_speed 5
 #var move_speed $default_move_speed
 
 #NOP === SPECIAL MELEE ===
-#alias wo {wolf}
+#alias wo {wolf @determine_target{%0}}
 
 #NOP === SUPER DUPER ABILITIES ===
-#alias lh {light;hammer}
-#alias lw {light;wolf %0}
-#alias lb {light;kame}
-#alias ldd {light;dd}
+#alias lh {light;h}
+#alias lw {light;wo %0}
+#alias lb {light;ka %0}
+#alias ldd {light;dd %0}
 #alias ld {light;do %0}
 #alias lt {light;tri %0}
-#alias sh {spirit;hammer}
-#alias sw {spirit;wolf %0}
-#alias st {spirit;tri %0}
-#alias sb {spirit;kame}
-#alias sdd {spirit;dd}
+#alias sh {spirit;h}
+#alias sw {spirit;wo %0}
+#alias st {spirit;tr %0}
+#alias sb {spirit;k %0}
+#alias sdd {spirit;dd %0}
 #alias sd {spirit;do %0}
 
 #NOP == DEFENSE ==
-#alias so {solar}
+#alias so {solar @determine_target{%0}}
 #alias ll {light}
 #alias ss {spirit}
 
 #NOP == MISC ==
-#alias cc {power down;power stop;}
 
 #NOP === BLASTS ===
-#alias do {dodonpa}
-#alias tr {tri}
-#alias dd {
-    dest %0
-    #NOP #if {"%0" != ""} {#echo {1}};#elseif {"$target" != 0} {#echo {2}};#else {#echo {3}}
-}
+#alias do {dodonpa @determine_target{%0}}
+#alias tr {tri @determine_target{%0}}
+#alias dd {dest @determine_target{%0}}
+
+#action {A white aura bursts around you!} {speed 7}
+#action {A yellow aura bursts around you!} {speed 8}
+#action {Your %w aura fades.} {reset_speed}

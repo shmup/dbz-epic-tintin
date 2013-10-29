@@ -1,3 +1,8 @@
 #action {You're now considered idle %*} {save;quit;}
-#action {You can't fly that fast!} {ms $default_move_speed}
+#action {You can't fly that fast!} {speed $default_move_speed}
 #action {Everything goes dark as you lose consciousness!} {sleep}
+
+#NOC This adds your last received tell to the split up top
+#action {[TELL] <- %1, '%2'} {
+    #format line {<007>%1: %2} {%1} {%2}; #showme {$line} {-1};
+}

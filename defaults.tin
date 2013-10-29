@@ -2,3 +2,4 @@
 #READ configs.tin
 #READ triggers.tin
 #READ aliases.tin
+#READ functions.tin

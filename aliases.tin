@@ -1,4 +1,4 @@
-#NOP == DEFENSE ==
+#NOP === DEFENSE ===
 #alias d {dodge left}
 #alias g {dodge right}
 #alias f {parry high}
@@ -22,23 +22,65 @@
 #alias el {elbow}
 
 #NOP === BLASTS ===
-#alias bl {blast}
-#alias ka {kamehameha}
-#alias re {renzoku}
+#alias bl {blast @determine_target{%0}}
+#alias k {kamehameha @determine_target{%0}}
+#alias re {renzoku @determine_target{%0}}
 
 #NOP === STUNNED MELEE ===
 #alias yank {yank}
 #alias throw {throw}
 
+#NOP === FINISHERS ===
+#alias finish {finish @determine_target{%0}}
+#alias snap {snap @determine_target{%0}}
+
 #NOP === MISC ===
 #alias pp {power up}
 #alias pd {power down}
 #alias ps {power stop}
+#alias cc {power down;power stop;}
 #alias scan {sense}
 #alias ff {fly;fly}
+#alias {target} {
+    #if {"%0" == ""} {
+        #if {&{target}} {#var result $target} {#var result {no one}}
+        #showme {<cfa>You are targetting <fff>$result<cfa>.};
+        #unvariable result;
+    };
+    #else {
+        #var target %0;
+        #showme {<cfa>Targetting <fff>%0<cfa>.};
+    }
+}
+#alias {speed} {#var move_speed %0}
+#alias reload {
+    #read {defaults.tin};
+    #read {dbz-epic-human.tin};
+    #showme {<cfa>Reloaded.};
+}
 
-#alias {tar} {#var target %0}
-#alias {ms} {#var move_speed %0}
+#NOP === RESETTING ===
+#alias reset_speed {
+    speed $default_move_speed;
+}
+#alias reset_target {
+    #unvariable target;
+}
+#alias reset {
+    #if {"%0" == "speed"} {
+        reset_speed;
+        #showme {<cfa>Resetting <fff>speed<cfa>.};
+    };
+    #elseif {"$0" == "target"} {
+        reset_target;
+        #var result {<cfa>Resetting <fff>target<cfa>.};
+    };
+    #else {
+        reset_speed;
+        reset_target;
+        #showme {<cfa>Resetting <fff>speed<cfa> and <fff>target<cfa>.};
+    }
+}
 
 #NOP === MOVEMENT ===
 #alias n {north}
@@ -56,3 +98,25 @@
 #alias fne {fly $move_speed ne}
 #alias fsw {fly $move_speed sw}
 #alias fse {fly $move_speed se}
+
+#NOP === ZANZOKEN ===
+#alias zn {zanz 1 north}
+#alias zs {zanz 1 south}
+#alias ze {zanz 1 east}
+#alias zw {zanz 1 west}
+#alias z1n {zanz 1 north}
+#alias z2n {zanz 2 north}
+#alias z3n {zanz 3 north}
+#alias z4n {zanz 4 north}
+#alias z1s {zanz 1 south}
+#alias z2s {zanz 2 south}
+#alias z3s {zanz 3 south}
+#alias z4s {zanz 4 south}
+#alias z1e {zanz 1 east}
+#alias z2e {zanz 2 east}
+#alias z3e {zanz 3 east}
+#alias z4e {zanz 4 east}
+#alias z1w {zanz 1 west}
+#alias z2w {zanz 2 west}
+#alias z3w {zanz 3 west}
+#alias z4w {zanz 4 west}

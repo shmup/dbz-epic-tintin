@@ -1,0 +1,8 @@
+#function {determine_target} {
+     #if {"%0" != ""} {
+        #var result %0;
+     };
+     #elseif {&{target}} {
+        #var result $target;
+     };
+}
