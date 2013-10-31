@@ -2,13 +2,11 @@
 #action {You can't fly that fast!} {speed $default_move_speed}
 #action {Everything goes dark as you lose consciousness!} {sleep}
 
-#action {%*'s corpse decays.} {
+#action {%*'s corpse decays} {
     #if {"$farming" == "true"} {
-        #showme %0;
-        rest;wake;fly;fly \"%0\";
+        rest;wake;fly;fly \"%1\";
     }
 }
-
 #alias foo {fly \"Yamcha\""};
 
 #NOC This adds your last received tell to the split up top
