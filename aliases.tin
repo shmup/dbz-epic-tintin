@@ -28,7 +28,7 @@
 
 #NOP === STUNNED MELEE ===
 #alias yank {yank}
-#alias throw {throw}
+#alias t {\throw}
 
 #NOP === MISC ===
 #alias pp {power up}
@@ -86,11 +86,10 @@
 
 #alias toggle {
     #if {"%0" == "farming"} {
-        #if {$farming == true} {
+        #if {"$farming" == "true"} {
             #var farming false;
             #showme {<fff>Farming <cfa>is now<fff> disabled<cfa>.};
-        };
-        #else {
+        }; #else {
             #var farming true;
             #showme {<fff>Farming <cfa>is now<fff> enabled<cfa>.};
         }
